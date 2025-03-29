@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app-grey {
+  background-color: #efecec;
+}
+
+/* Hide the default arrows in WebKit-based browsers (e.g., Chrome, Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide the default arrows in Firefox */
+input[type="number"] {
+  -webkit-appearance: textfield; /* For WebKit browsers (Chrome, Safari) */
+  appearance: textfield; /* Standard property, works in most modern browsers */
+  -moz-appearance: none; /* Optional: Firefox styling reset */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Class for Item Selection */
+.isSelected {
+  border: 3px solid #3b82f6;
+}
+
+.orderSummary-shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* More defined shadow */
+}
+
+/* Navbar Css */
+/* Drawer list item styles */
+.navItem {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  color: grey;
+}
+
+.navItemActive {
+  background-color: #3b82f6;
+}
+
+.navItemText {
+  font-weight: 300;
+  margin-left: 1rem;
+}
+
+/* Horizontal navbar button styles */
+.navButton {
+  color: grey;
+  font-weight: 300;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+}
+
+.navButtonActive {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.navButtonHoverActive {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.navButtonHoverInactive {
+  color: grey;
+}

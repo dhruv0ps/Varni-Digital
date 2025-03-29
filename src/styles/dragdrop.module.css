@@ -1,0 +1,78 @@
+/* Module CSS for Sizes */
+
+.module2 {
+  height: 41.99vh;
+  width: 23.203vw;
+}
+
+.module2 > div:first-child {
+  /* height: 146px;
+    width: 146px; */
+  height: 32.99vh;
+  width: 18.203vw;
+}
+
+.module4 {
+  height: 41.99vh;
+  width: 33.416vw;
+}
+
+.module4 > div:first-child {
+  /* height: 146px;
+    width: 280px; */
+  height: 32.99vh;
+  width: 28.203vw;
+}
+
+.module6 {
+  height: 41.99vh;
+  width: 49.827vw;
+}
+
+.module6 > div:first-child {
+  /* height: 146px;
+    width: 432px; */
+  height: 32.99vh;
+  width: 45.203vw;
+}
+
+.module8 {
+  height: 41.99vh;
+  width: 63.85vw;
+}
+
+.module8 > div:first-child {
+  /* height: 146px;
+    width: 565px; */
+  height: 32.99vh;
+  width: 59.753vw;
+}
+
+.module10 {
+  height: 41.99vh;
+  width: 58.685vw;
+}
+
+.module10 > div:first-child {
+  /* height: 146px;
+    width: 565px; */
+  height: 32.99vh;
+  width: 54.203vw;
+}
+
+.module12 {
+  height: 69.99vh;
+  width: 49.384vw;
+}
+
+/* For only First Child in 12 Module */
+/* .module12>div:first-child {
+    height: 32.99vh;
+    width: 45.203vw;
+} */
+
+.module12 > div:nth-child(1),
+.module12 > div:nth-child(2) {
+  height: 30.99vh;
+  width: 45.203vw;
+}
