@@ -1,3 +1,4 @@
+"use client"
 import { configureStore } from '@reduxjs/toolkit'
 import selectionSlice from '../slices/selectionSlice';
 import cartSlice from '../slices/cartSlice';

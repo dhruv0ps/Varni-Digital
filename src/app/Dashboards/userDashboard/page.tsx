@@ -96,7 +96,7 @@ const UserDashboard = () => {
     // Invoked after user Enters Email and Clicks Done in Complete Modal
     const handleCompleteOrder = async (userName: string, userMail: string) => {
         // Generating Order Pdf
-        await generateOrderPdf({ logoUrl: logoUrl, email: userMail, userName: userName, totalQty: totalQty, });
+        await generateOrderPdf({ logoUrl: logoUrl, email: userMail, userName: userName, totalQty: totalQty, finalPrice:totalPrice});
         // Invoking Email Api 
         // if (cartData) {
         //     dispatch(sendPanelDetailsEmail({ panelData: cartData, recipientEmail: userMail }))

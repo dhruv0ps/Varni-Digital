@@ -6,13 +6,15 @@ interface GenerateOrderPdfProps {
     email: string,
     userName: string,
     totalQty: number,
+    finalPrice: number,
 }
 
 export const generateOrderPdf = async ({
     logoUrl,
     email,
     userName,
-    totalQty
+    totalQty,
+    finalPrice
 }: GenerateOrderPdfProps) => {
 
     // Step 1: Get the DOM elements for DragDropArea and OrderSummary
@@ -103,7 +105,7 @@ export const generateOrderPdf = async ({
         doc.addImage(orderSummaryImgData, 'PNG', centerOrderSummaryX, yPosition, orderSummaryWidth, orderSummaryHeight);
         yPosition += orderSummaryHeight + 10; // Move down after OrderSummary
 
-        // Step 4: Calculate the position for the text (Name, Email, Quantity)
+        // Step 4: Calculate the position for the text (Name, Email, Quantity, Price)
         const nameText = `Name: ${userName}`;
         const emailText = `Email: ${email}`;
         const totalQtyText = `Quantity: ${totalQty}`;
@@ -122,12 +124,13 @@ export const generateOrderPdf = async ({
             textY = yPosition;
         }
 
-        // Position the text (name, email, qty)
+        // Position the text (name, email, qty, price)
         const textWidth = doc.getTextWidth(nameText);
         const textX = (pageWidth - textWidth) / 2; // Center the text
         doc.text(nameText, textX, textY);
         doc.text(emailText, textX, textY + 5);
         doc.text(totalQtyText, textX, textY + 10);
+        doc.text(`Total Price: ₹${finalPrice}`, textX, textY + 15);
 
         // Saving the PDF
         doc.save(filename);

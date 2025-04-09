@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import Portal from '@mui/material/Portal';
 import Alert from '@mui/material/Alert';
